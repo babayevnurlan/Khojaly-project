@@ -1,0 +1,340 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav #logo-box img {
+  width: 80px;
+  margin: 1.5rem 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  position: relative;
+  color: rgb(218, 218, 218);
+  font-weight: 500;
+  padding: 0 10px;
+  transition: 0.3s all;
+}
+
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 1.5rem;
+  }
+}
+
+/* Header */
+header {
+  padding-top: calc(200px + 10rem);
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .important-text h1 {
+  font-size: 6rem;
+  color: rgb(218, 218, 218);
+  letter-spacing: 1rem;
+}
+
+@media (max-width: 768px) {
+  header .important-text h1 {
+    letter-spacing: 0rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header .important-text h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Section */
+section .section-name {
+  font-size: 3.2rem;
+  color: rgb(218, 218, 218);
+}
+
+section .text_and_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .text_and_image .left .text p {
+  padding: 0 10rem;
+  text-align: left;
+  color: rgb(218, 218, 218);
+}
+
+section .text_and_image .right img {
+  padding-right: 10rem;
+  width: 400px;
+}
+
+@media (max-width: 992px) {
+  section .text_and_image {
+    flex-direction: column;
+  }
+
+  section .text_and_image .left .text p {
+    padding: 0 2rem;
+  }
+
+  section .text_and_image .right img {
+    padding-right: 0;
+    width: 300px;
+  }
+}
+
+/* Section - B */
+section .text_and_photo {
+  flex-direction: column;
+}
+
+section .text_and_photo .left .text p {
+  padding: 0 10rem;
+  color: rgb(218, 218, 218);
+  text-align: left;
+}
+
+section .text_and_photo .right img {
+  padding-right: 0;
+  width: 350px;
+}
+
+/* Section - C */
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Caption text */
+.texter {
+  color: #ffffff;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #111111;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.slideshow-container .section-name {
+  font-size: 3.2rem;
+  color: rgb(218, 218, 218);
+  text-align: center;
+}
+
+/* Scrollbar style */
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
